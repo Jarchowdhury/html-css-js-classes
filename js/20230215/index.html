@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+            #box{
+                height: 200px;
+                width: 200px;
+                background-color: blanchedalmond;
+                margin: auto;
+                margin-top: 5%;
+                padding: 2%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <center>
+                <h1>conveter</h1>
+                <level>inchi: </level>
+                <input type="text" id="test" value=""><br><br>
+                <input type="button" id="test1" value="click" onclick="inchi_to_cm()"> <br><br>
+                <level> cm: </level>
+                <input type="text" id="test2" value=""><br>
+            </center>
+            
+        </div>
+      
+        <script>
+          
+            function inchi_to_cm(){
+                var inchi = Number(document.getElementById("test").value);
+                var cm = inchi*2.54;
+                document.getElementById("test2").value=cm;
+            }
+
+      </script>
+    </body>
+</html>

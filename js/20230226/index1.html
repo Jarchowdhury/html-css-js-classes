@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style>
+            #box{
+                height: 400px;
+                width: 400px;
+                background-color: blanchedalmond;
+                margin: auto;
+                margin-top: 5%;
+                padding: 2%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <center>
+                <h1> vowel check (first letter)  </h1>
+                <level>type letter(more letter) : </level>
+                <input type="text" id="letter" value=""><br><br>
+                <input type="button" id="btn" value="click" onclick="vowel_check()"> <br><br>
+                <level> result: </level>
+                <p id="result"></p>
+            </center>
+            
+        </div>
+      
+        <script>
+          
+            function vowel_check(){
+                var text =document.getElementById("letter").value;
+                var letter=text.split("");
+               if(letter[0]=="a" || letter[0]=="e"|| letter[0]=="i"|| letter[0]=="o"|| letter[0]=="u"){
+                    document.getElementById("result").innerHTML="vowel";
+               }
+               else{
+                document.getElementById("result").innerHTML="consonnet";
+               }
+            }
+
+      </script>
+    </body>
+</html>

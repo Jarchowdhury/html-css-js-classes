@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <style>
+            #box{
+                height: 400px;
+                width: 400px;
+                background-color: blanchedalmond;
+                margin: auto;
+                margin-top: 5%;
+                padding: 2%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <center>
+                <h1> change background-color   </h1>
+                <level>type color name  : </level>
+                <input type="text" id="color" value=""><br><br>
+                <input type="button" id="btn" value="click" onclick="cange_color_bg()"> <br><br>
+                
+            </center>
+            
+        </div>
+      
+        <script>
+          
+            function cange_color_bg(){
+                var color = document.getElementById("color").value;
+                 document.body.style.backgroundColor=color;
+            }
+
+      </script>
+    </body>
+</html>

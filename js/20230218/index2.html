@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <style>
+            #box{
+                height: 400px;
+                width: 400px;
+                background-color: blanchedalmond;
+                margin: auto;
+                margin-top: 5%;
+                padding: 2%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <center>
+                <h1> age check  </h1>
+                <level>type age : </level>
+                <input type="text" id="age" value=""><br><br>
+                <input type="button" id="btn" value="click" onclick="age_check()"> <br><br>
+                <level> result: </level>
+                <p id="result"></p>
+            </center>
+            
+        </div>
+      
+        <script>
+          
+            function age_check(){
+                var age = Number(document.getElementById("age").value);
+               if(age>60){
+                    document.getElementById("result").innerHTML="siniour ctz";
+               }
+               else if(age>40){
+                document.getElementById("result").innerHTML="old";
+               }
+               else if(age>18){
+                document.getElementById("result").innerHTML="young";
+               }
+               else if(age>12){
+                document.getElementById("result").innerHTML="teenager";
+               }
+               else if(age>4){
+                document.getElementById("result").innerHTML="child";
+               }
+               else{
+                document.getElementById("result").innerHTML="baby";
+               }
+            }
+
+      </script>
+    </body>
+</html>

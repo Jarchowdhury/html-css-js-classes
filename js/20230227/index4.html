@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="letter">
+    <input type="button" id="btn" onclick="check_vowel()" value="check">
+    <span id="vowel"></span>
+    <span id="consonnet"></span>
+
+    <script>
+        function check_vowel(){
+            var text = document.getElementById("letter").value;
+            var letter= text.split("");
+            var length=letter.length;
+            var vowel=0;
+            var consonnet=0;
+            for(var i=0;i<length;i++){
+                if(letter[i]=="a" || letter[i]=="e"|| letter[i]=="i"||letter[i]=="o"||letter[i]=="u"){
+                    vowel++;
+                 }
+                 else{
+                    consonnet++;
+                 }
+            }
+            document.getElementById("vowel").innerHTML=vowel+" vowel ";
+            document.getElementById("consonnet").innerHTML=consonnet+" consonnet ";
+        }
+    </script>
+
+</body>
+</html>

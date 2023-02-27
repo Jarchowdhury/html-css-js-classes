@@ -1,0 +1,16 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <input type="text" id="test" value="10"><br><br>
+        <input type="text" id="test1" value="20"> <br><br>
+        <h1 id="test2"></h1>
+        <script>
+           var number1 = Number(document.getElementById("test").value);
+           var number2 = Number(document.getElementById("test1").value);
+           var result = number1+number2;
+            document.getElementById("test2").innerHTML=result;
+      </script>
+    </body>
+</html>

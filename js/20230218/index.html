@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <style>
+            #box{
+                height: 400px;
+                width: 400px;
+                background-color: blanchedalmond;
+                margin: auto;
+                margin-top: 5%;
+                padding: 2%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <center>
+                <h1>number check possitive or negative</h1>
+                <level>number: </level>
+                <input type="text" id="number" value=""><br><br>
+                <input type="button" id="btn" value="click" onclick="number_check()"> <br><br>
+                <level> result: </level>
+                <p id="result"></p>
+            </center>
+            
+        </div>
+      
+        <script>
+          
+            function number_check(){
+                var number = Number(document.getElementById("number").value);
+               if(number>0){
+                    document.getElementById("result").innerHTML="possitive";
+               }
+               else{
+                document.getElementById("result").innerHTML="negative";
+               }
+            }
+
+      </script>
+    </body>
+</html>

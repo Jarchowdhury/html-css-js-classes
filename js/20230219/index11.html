@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <img src="img/1.jpg" alt="">
+    <img src="img/2.jpg" alt="">
+    <img src="img/3.jpg" alt="">
+    <img src="img/4.jpg" alt="">
+    <img src="img/5.jpg" alt="">
+    <img src="img/6.jpg" alt="">
+    <script>
+        var count=0;
+        slid_show();
+        function slid_show(){
+            var all_img=document.getElementsByTagName("img");
+            for(var i=0;i<all_img.length;i++){
+                all_img[i].style.display="none";
+            }
+            all_img[count].style.display="block";
+            count++;
+            if(count>5){
+                count=0;
+            }
+            setTimeout(slid_show,1000);
+        }
+      
+    </script>
+</body>
+</html>

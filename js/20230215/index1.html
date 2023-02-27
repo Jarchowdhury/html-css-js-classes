@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <style>
+            #box{
+                height: 400px;
+                width: 400px;
+                background-color: blanchedalmond;
+                margin: auto;
+                margin-top: 5%;
+                padding: 2%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <center>
+                <h1>area of ragtangale</h1>
+                <level>width: </level>
+                <input type="text" id="width" value=""><br><br>
+                <level>height: </level>
+                <input type="text" id="height" value=""><br><br>
+                <input type="button" id="btn" value="click" onclick="area_of_ract()"> <br><br>
+                <level> area: </level>
+                <input type="text" id="area" value=""><br>
+            </center>
+            
+        </div>
+      
+        <script>
+          
+            function area_of_ract(){
+                var width = Number(document.getElementById("width").value);
+                var height = Number(document.getElementById("height").value);
+                var area = width*height;
+                document.getElementById("area").value=area;
+            }
+
+      </script>
+    </body>
+</html>

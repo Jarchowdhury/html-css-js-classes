@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+            #box{
+                height: 400px;
+                width: 400px;
+                background-color: blanchedalmond;
+                margin: auto;
+                margin-top: 5%;
+                padding: 2%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <center>
+                <h1>area of square</h1>
+                <level>side: </level>
+                <input type="text" id="side" value=""><br><br>
+                <input type="button" id="btn" value="click" onclick="area_of_sqr()"> <br><br>
+                <level> area: </level>
+                <input type="text" id="area" value=""><br>
+            </center>
+            
+        </div>
+      
+        <script>
+          
+            function area_of_sqr(){
+                var side = Number(document.getElementById("side").value);
+                var area = side*side;
+                document.getElementById("area").value=area;
+            }
+
+      </script>
+    </body>
+</html>

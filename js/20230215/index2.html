@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+            #box{
+                height: 400px;
+                width: 400px;
+                background-color: blanchedalmond;
+                margin: auto;
+                margin-top: 5%;
+                padding: 2%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <center>
+                <h1>area of circle</h1>
+                <level>radius: </level>
+                <input type="text" id="radius" value=""><br><br>
+                <input type="button" id="btn" value="click" onclick="area_of_cir()"> <br><br>
+                <level> area: </level>
+                <input type="text" id="area" value=""><br>
+            </center>
+            
+        </div>
+      
+        <script>
+          
+            function area_of_cir(){
+                var radius = Number(document.getElementById("radius").value);
+                var area = 3.1416*radius*radius;
+                document.getElementById("area").value=area;
+            }
+
+      </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="text" onkeyup="check_text()" cols="30" rows="10"></textarea>
+    <input type="button" id="btn" onclick="check_text()" value="check"><br>
+    letter: <span id="letter"></span><br>
+    word: <span id="word"></span><br>
+    sentence: <span id="sentence"></span><br>
+
+    <script>
+        function check_text(){
+            var text = document.getElementById("text").value;
+            var letter= text.split("");
+            var length=letter.length;
+            var letter_count =0;
+            var word_count=0;
+            var sentence_count=0;
+            for(var i=0;i<length;i++){
+                if(letter[i]==" "|| letter[i]==","){
+                    word_count++;
+                 }
+                else if(letter[i]=="."){
+                    sentence_count++;
+                 }
+                 else{
+                    letter_count++;
+                 }
+            }
+            document.getElementById("letter").innerHTML=letter_count;
+            document.getElementById("word").innerHTML=word_count;
+            document.getElementById("sentence").innerHTML=sentence_count;
+        }
+    </script>
+
+</body>
+</html>
